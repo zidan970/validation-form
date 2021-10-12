@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    </style>
+</head>
+
+<body>
+    <section class="container p-4 flex-column min-vh-100 d-flex align-items-center justify-content-center">
+        <!--Judul Formulir-->
+        <h1>Formulir Persetujuan Kuliah <i>Offline</i></h1>
+
+        <div class="container">
+            <form name="formPersetujuan">
+                <div class="form-group">
+                    <!--User mengisi nama-->
+                    <label>Nama</label>
+                    <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" required
+                        maxlength="40" minlength="3"></input>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi NRP-->
+                    <label>NRP</label>
+                    <input type="number" name="nrp" placeholder="NRP" class="form-control" required maxlength="14"
+                        minlength="13"></input>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi alamat e-mail-->
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email Aktif" class="form-control" required
+                        minlength="10"></input>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi asal kota/kab beserta provinsi-->
+                    <label>Asal</label>
+                    <input type="text" name="asal" placeholder="Kota/Kab, Provinsi" class="form-control" required
+                        minlength="1"></input>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi asal departemen di ITS-->
+                    <label>Departemen</label>
+                    <select name="departemen" class="form-control" required>
+                        <option selected>Pilih</option>
+                        <option value="1">Fisika</option>
+                        <option value="2">Matematika</option>
+                        <option value="3">Statistika</option>
+                        <option value="4">Kimia</option>
+                        <option value="5">Biologi</option>
+                        <option value="6">Aktuaria</option>
+                        <option value="7">Teknik Perkapalan</option>
+                        <option value="8">Teknik Sistem Perkapalan</option>
+                        <option value="9">Teknik Kelautan</option>
+                        <option value="10">Teknik Transportasi Laut</option>
+                        <option value="11">Teknik Mesin</option>
+                        <option value="12">Teknik Kimia</option>
+                        <option value="13">Teknik Fisika</option>
+                        <option value="14">Teknik Sistem dan Industri</option>
+                        <option value="15">Teknik Material</option>
+                        <option value="16">Teknik Elektro</option>
+                        <option value="17">Teknik Biomedik</option>
+                        <option value="18">Teknik Komputer</option>
+                        <option value="19">Teknik Informatika</option>
+                        <option value="20">Sistem Informasi</option>
+                        <option value="21">Teknologi Informasi</option>
+                        <option value="22">Teknik Sipil</option>
+                        <option value="23">Arsitektur</option>
+                        <option value="24">Teknik Lingkungan</option>
+                        <option value="25">Perencanaan Wilayah dan Kota</option>
+                        <option value="26">Teknik Geomatika</option>
+                        <option value="27">Teknik Geofisika</option>
+                        <option value="28">Desain Produk Industri</option>
+                        <option value="29">Desain Interior</option>
+                        <option value="30">Desain Komunikasi Visual</option>
+                        <option value="31">Manajemen Bisnis</option>
+                        <option value="32">Studi Pembangunan</option>
+                        <option value="33">Manajemen Teknologi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi status vaksin-->
+                    <label>Status Vaksin</label>
+                    <select name="Status Vaksin" class="form-control">
+                        <option selected>Pilih</option>
+                        <option value="1">Belum vaksin</option>
+                        <option value="2">Vaksin dosis 1</option>
+                        <option value="3">Vaksin dosis 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <!--User mengisi pilihan persetujuan untuk kuliah offline-->
+                    <label>Apakah Anda setuju untuk kuliah offline?</label>
+                    <select name="Apakah Anda setuju untuk kuliah offline?" class="form-control">
+                        <option selected>Pilih</option>
+                        <option value="1">Setuju</option>
+                        <option value="2">Tidak Setuju</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="javascript:validateForm();">Submit</button>
+            </form>
+        </div>
+
+        <style>
+            /*Untuk body*/
+            body 
+            {
+                background-color: #f0f2f5;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            /*Untuk tombol submit*/
+            .btn-primary 
+            {
+                align-items: right;
+                background-color: #0067ac;
+                border-color: #013880;
+                color: #fff;
+            }
+        </style>
+    </section>
+</body>
+
+</html>
